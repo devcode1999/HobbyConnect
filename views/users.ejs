@@ -1,0 +1,21 @@
+<h2>
+    <%if(currentUser){%>
+    <%=currentUser.username%>
+        <%}%>
+</h2>
+<h2>List of users</h2>
+<ul>
+    <% users.forEach(function(user){ %>
+        <li> <%=user.name%> 
+            <a href="/video/<%=user._id%>">VideoCall</a>
+        </li>
+   <% }) %>
+</ul>
+<a href="/">Home</a>
+<a href="users/new"> New user</a>
+<p> 
+    <a href="/login"> Login</a>
+    <a href="/register">Register</a>
+    <a href="/logout">Logout</a>
+</p>
+

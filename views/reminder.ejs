@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder</title>
+</head>
+<body>
+   <form action="/addreminder" method="POST">
+    <input type="text" id="title" name="Title">
+    <input type="textarea" id="description" name="Description">
+    <input type="date" id="date" name="Date">
+    <input type="time" id="time" name="Time">
+    <button type="submit">Submit</button>
+
+    <h2>Your Reminders</h2>
+    <% for(let i=0;i<result.length;i++) {%>
+        <li>Remainder <%=i+1%> is due at <%=result[i].date.day%>- <%=result[i].date.month%>- <%=result[i].date.year%> at  <%=result[i].time.hr%>: <%=result[i].time.min%>
+        <a href="/delete/<%=result[i]._id%>">😬</a>
+        </li>
+        <% } %>
+</form>
+</body>
+</html>

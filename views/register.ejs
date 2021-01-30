@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="getLocation()">
+    <h1>Create new User</h1>
+    <div class ="container">
+        <h1 style ="text-align: center; width:30%; margin:30px auto; ">New Campground</h1>
+        <div style ="width:30%; margin:0 auto; ">
+            <form>
+                <div class="form-group">
+                    <input class ="form-control" type="text" name ="username" id="username" placeholder="username">
+                </div>
+                <div class="form-group">
+                    <input class ="form-control" type="password" name ="password" id="password" placeholder="password">
+                </div>
+                <div class="form-group">
+                    <input class ="form-control" type="text" name ="name" id="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input class ="form-control" type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input class ="form-control" type="number" name="mobile" id="mobile" placeholder="Mobile">
+                </div>
+                <div class="form-group">
+                    <input class ="form-control" type="number" name="age" id="age" placeholder="Age" min = "15" max = "100" step = "1">
+                </div>
+                <div class="form-group">
+                    <button onclick="fetchdata()" class="btn btn-md btn-primary btn-block">Submit</button>
+                </div>
+            </form>
+            <a href="/users">Go back</a>
+        </div>
+            
+        
+
+    </div>
+    <script src="/assets/locationlogic.js"></script>
+</body>
+</html>
+
