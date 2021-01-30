@@ -1,33 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <script src="assets/locationlogic.js"></script>
-</head>
-<body>
 
-    <p>Click the button to get your coordinates.</p>
-
-    <button onclick="getLocation()">Try It</button>
-
-    <p id="demo"></p>
-    <div id="mapholder"></div>
-
-    <form action="/friends" method=post>
-        <label for="distances">Choose a distance range(in km):</label>
-        <select id="distances" name="distances">
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-        </select>
-        <button id="enteredrange" type="submit">Submit</button>
-    </form>
-    <ol>
-        <li>
-            <h1><% %></h1>
+<h2>Pending Requests</h2>
+<ul>
+    <% pending.forEach(function(req){ %>
+        <li> <%=req.name%> 
+            <a href="/acceptreq/<%=req._id%>">Accept</a>
+            <a href="/rejectreq/<%=req._id%>">Reject</a>
         </li>
-    </ol>
-</body>
+   <% }) %>
+    </ul>
 
-</html>
+    <h2>Friends</h2>
+<ul>
+    <% friends.forEach(function(req){ %>
+        <li> <%=req.name%> 
+        </li>
+   <% }) %>
+    </ul>
+
